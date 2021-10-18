@@ -1,0 +1,12 @@
+name: 'toggle1'
+meta:
+  description: 'toggle about xYZ'
+  tags:
+    - Foo
+
+default:  
+  ttl: 120s
+  value: #default value
+    data: "{value:0}"
+    type: jsonFormat
+
