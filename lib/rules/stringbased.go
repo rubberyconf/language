@@ -2,8 +2,6 @@ package rules
 
 import (
 	"container/list"
-
-	str "github.com/rubberyconf/rubberyconf/lib/core/stringarr"
 )
 
 type StringArrayBased struct {
@@ -23,5 +21,18 @@ func (me *StringArrayBased) CheckRule(potentialValues []string, currentValue str
 }
 
 func (me *StringArrayBased) evaluate(potentialValues []string, currentValue string) bool {
-	return str.Include(potentialValues, currentValue)
+	return Include(potentialValues, currentValue)
+}
+
+func Include(vs []string, t string) bool {
+	return Index(vs, t) >= 0
+}
+
+func Index(vs []string, t string) int {
+	for i, v := range vs {
+		if v == t {
+			return i
+		}
+	}
+	return -1
 }
