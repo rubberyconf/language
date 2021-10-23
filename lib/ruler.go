@@ -51,7 +51,6 @@ func (me RulerMaster) CheckRules(f rules.FeatureRule, vars map[string]string) (i
 	matches := list.New()
 
 	for e := me.rules.Front(); e != nil; e = e.Next() {
-		// do something with e.Value
 		aux := e.Value.(BasicRuleMethods)
 		aux.CheckRule(f, vars, matches, &total)
 	}

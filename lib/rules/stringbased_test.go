@@ -14,6 +14,7 @@ func TestStringBased(t *testing.T) {
 		expected        bool
 	}{
 		{"value2", potentialValues, true},
+		{"", potentialValues, false},
 		{"value50", potentialValues, false},
 	}
 

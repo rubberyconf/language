@@ -12,14 +12,8 @@ func TestTimer(t *testing.T) {
 	}{
 		{FeatureTimer{"xxxx Jan 123"}, false},
 		{FeatureTimer{"Aug 11, 2021 at 10:00pm (CEST)"}, true},
-		{FeatureTimer{"Sep 12, 2021 at 11:00pm (CEST)"}, false},
+		{FeatureTimer{"Sep 12, 2030 at 11:00pm (CEST)"}, false},
 	}
-
-	/*conf := config.GetConfiguration()
-	if conf == nil {
-		path, _ := os.Getwd()
-		conf = config.NewConfiguration(filepath.Join(path, "../../../config/local.yml"))
-	}*/
 
 	for _, tt := range tests {
 		testname := fmt.Sprintf("version: %s", tt.sent)

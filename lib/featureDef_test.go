@@ -1,23 +1,24 @@
 package lib
 
 import (
+	"os"
 	"testing"
 )
 
-func TestInMemoryOptions(t *testing.T) {
+func TestFeatureDef_example1(t *testing.T) {
 
-	/*
-		tests := getCommonScenarios()
-
-		ctx := context.Background()
-		for _, tt := range tests {
-			testname := fmt.Sprintf("key: %s, value: %s, duration: %d", tt.key, tt.value, tt.duration)
-			t.Run(testname, func(t *testing.T) {
-				if !completed || err != nil {
-					t.Errorf(" error storing value key: %s", tt.key)
-				}
-
-			})
+	t.Run("test config1", func(t *testing.T) {
+		dat, err := os.ReadFile("../examples/config1.yml")
+		if err != nil {
+			t.Errorf("error opening file1")
 		}
-	*/
+		var fdef FeatureDefinition
+
+		err = fdef.LoadFromYaml(string(dat))
+		if err != nil {
+			t.Errorf("parsing file1")
+		}
+
+	})
+
 }

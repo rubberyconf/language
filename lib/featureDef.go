@@ -91,7 +91,6 @@ func (conf *FeatureDefinition) ToString() (string, error) {
 
 	b, err := yaml.Marshal(conf)
 	if err != nil {
-		//logs.GetLogs().WriteMessage(logs.ERROR, "error marshalling yaml content to featureDefinition", nil)
 		return "", err
 	}
 	sb := string(b)
@@ -114,19 +113,14 @@ func (conf *FeatureDefinition) GetFinalValue(vars map[string]string) (interface{
 	case ValueJsonFormat:
 		b, err := json.MarshalIndent(data, "", "   ")
 		if err != nil {
-			//logs.GetLogs().WriteMessage(logs.ERROR, "error marshalling content of featureDefinition to json", err)
 			return nil, err
 		}
 		afterCast = string(b)
 	case ValueNumber:
 		afterCast = data.(int)
 	case ValueExternResource:
-		//logs.GetLogs().WriteMessage(logs.ERROR, "error TODO marshalling content of featureDefinition to externResource", nil)
 		afterCast = nil
 	}
-
-	//logs.GetLogs().WriteMessage(logs.INFO, fmt.Sprintf("configuration applied: %s, matches: %v ", confId, matches), nil)
-
 	return afterCast, nil
 }
 
