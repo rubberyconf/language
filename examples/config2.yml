@@ -16,7 +16,9 @@ configurations:
         - production
         - staging
 
-    rollout: allAtOnce
+    rollout:
+      enabledForOnly: 0.10
+
     value: "{value:1}"
 
   - config:
@@ -36,7 +38,6 @@ configurations:
         key: "color"
 
     rollout: 
-      strategy: partial
       enabledForOnly: 0.10
-      selector: sessionID
+
     value: "{value:2}"

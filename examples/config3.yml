@@ -3,7 +3,6 @@ meta:
   tags:
     - Foo
 default:
-  rollout: allAtOnce
   ttl: 120s
   value: 
       data: false
@@ -18,17 +17,13 @@ configurations:
         - android
         - web
       version:
-        - ">10.0.1"
-        - "<9.0.0"
-        - "9.5.1"
+        min: "1.0.1"
+        max: "9.0.0"
       country:
         - ES
-        - PT
-        - UK
-        - IT
       city:
         - BCN
-        - LND
+        - MAD
       userId:
         - 4234234234Z
         - X2342342342
@@ -38,7 +33,9 @@ configurations:
         - staff
         - testers
         
-    rollout: allAtOnce
+    rollout:
+      enabledForOnly: 0.10
+
     value: true
 
   - config: 
@@ -47,8 +44,12 @@ configurations:
     rules:
       city:
         - BCN
+      country:
+        - FR
       timer: 
         triggerTime: "Jan 2, 2021 at 3:04pm (MST)"  
 
+    rollout:
+      enabledForOnly: 0.10
+    
     value: true
-    rollout: allAtOnce
