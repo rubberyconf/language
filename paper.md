@@ -51,8 +51,8 @@ configurations:
       platform:
         - android
       version:
-	   min: “1.0.0”
-	   max: “10.0.0”
+       min: “1.0.0”
+       max: “10.0.0”
       country:
         - UK
     rollout:
@@ -157,20 +157,20 @@ I would like to thank reviewers [Erol Aran](https://github.com/erolaran) and [Ga
 
 ## References
 
-CaC https://dzone.com/articles/infrastructure-versus-config-as-code 
-PO https://www.scrum.org/resources/what-is-a-product-owner 
-DSL https://en.wikipedia.org/wiki/Domain-specific_language 
-CVS https://en.wikipedia.org/wiki/Concurrent_Versions_System 
-API https://en.wikipedia.org/wiki/Web_API 
-RDBMS https://en.wikipedia.org/wiki/Relational_database#RDBMS
-YAML, YML file https://es.wikipedia.org/wiki/YAML
-DevOps https://engineering.atspotify.com/2013/05/17/devops-management/
-[1] CMMI for development, v1.3 ​​https://resources.sei.cmu.edu/asset_files/TechnicalReport/2010_005_001_15287.pdf 
-[2] 828-2012 IEEE Standard for Configuration Management in Systems and Software Engineering. 2012
-[3] Chunqiang Tang, Thawan Kooburat, Pradeep Venkatachalam, Holistic Configuration Management @ Facebook 2016, pp. 7-8 https://research.fb.com/wp-content/uploads/2016/11/holistic-configuration-management-at-facebook.pdf 
-[4]Feature toggle, https://martinfowler.com/articles/feature-toggles.html 
-[5]Feature toggles at Netflix, https://netflixtechblog.com/preparing-the-netflix-api-for-deployment-786d8f58090d 
-[6] https://github.com/rubberyconf/language  
+* CaC https://dzone.com/articles/infrastructure-versus-config-as-code 
+* PO https://www.scrum.org/resources/what-is-a-product-owner 
+* DSL https://en.wikipedia.org/wiki/Domain-specific_language 
+* CVS https://en.wikipedia.org/wiki/Concurrent_Versions_System 
+* API https://en.wikipedia.org/wiki/Web_API 
+* RDBMS https://en.wikipedia.org/wiki/Relational_database#RDBMS
+* YAML, YML file https://es.wikipedia.org/wiki/YAML
+* DevOps https://engineering.atspotify.com/2013/05/17/devops-management/
+* [1] CMMI for development, v1.3 ​​https://resources.sei.cmu.edu/asset_files/TechnicalReport/2010_005_001_15287.pdf 
+* [2] 828-2012 IEEE Standard for Configuration Management in Systems and Software Engineering. 2012
+* [3] Chunqiang Tang, Thawan Kooburat, Pradeep Venkatachalam, Holistic Configuration Management @ Facebook 2016, pp. 7-8 https://research.fb.com/wp-content/uploads/2016/11/holistic-configuration-management-at-facebook.pdf 
+* [4]Feature toggle, https://martinfowler.com/articles/feature-toggles.html 
+* [5]Feature toggles at Netflix, https://netflixtechblog.com/preparing-the-netflix-api-for-deployment-786d8f58090d 
+* [6] https://github.com/rubberyconf/language  
 
 
 
